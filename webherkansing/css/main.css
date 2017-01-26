@@ -1,0 +1,388 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* end css reset */
+
+@font-face{font-family:NS Sans;src:url(../fonts/nssans__-webfont.eot);src:url(../fonts/nssans__-webfont.eot?#iefix) format("embedded-opentype"),url(../fonts/nssans__-webfont.woff) format("woff"),url(../fonts/nssans__-webfont.ttf) format("truetype"),url(../fonts/nssans__-webfont.svg#ns_sansregular) format("svg");font-weight:400;font-style:normal}
+
+@font-face{font-family:Soulmission;src:url(../fonts/SoulMission.ttf);}
+
+/*NAVIGATIE */
+
+nav {
+/*
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+*/
+    min-height: 3.5rem;
+    width: 100%;
+    min-width: 320px;
+    background-color: white;
+    position: fixed;
+    top:0;
+    background: white;
+    width: 100%;
+    z-index: 999;
+}
+
+nav > img {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    color: #003082;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+nav > a {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+}
+nav li{
+    display: inline-block;
+}
+.visible {
+    right: 0;
+    opacity: 1;
+    transition: all 1s;
+}
+
+/*HEADER */
+
+header {
+    background-image: url(../images/trein.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2em 0;
+    background-size:cover;
+    transition: all 2s;
+}
+
+header > article {
+    background-color: rgba(0,48,130,.8);
+    margin: 5em 0 1em 0;
+    padding: 1.5em;
+    color: white;
+    max-width: 30em;
+}
+
+header article p {
+    color: white;
+    padding-bottom: 0.5em;
+}
+
+header article a {
+    color: white;
+}
+
+/*FILTER*/
+
+.noDisplay{
+    display: none;
+}
+
+aside {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-top: -1.5em;
+    background-color: rgba(255,201,23,1);
+}
+
+aside legend {
+    background-color: rgba(255,201,23,1);
+    color: rgba(0,48,130,.8);
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+aside ul {
+    margin: 0.5em 0 0.5em 0;
+    padding: 1.5em;
+}
+
+/* ARTIKELEN */
+main article {
+    color: black;
+    font-size: 0.9em;
+    background-color: #fff;
+    width: 23em;
+    height: 26em;
+    box-shadow: 0 4px 2px -2px gray;
+    margin: 1em;
+    overflow: hidden;
+    position: relative;
+}
+main article:hover{
+    box-shadow: none;
+    transition: all 1s;
+    animation: shake 1s;
+}
+main article img {
+    height: 9em;
+    width: 100%;
+}
+
+main section {
+    padding: 1em 2em;
+}
+
+main section h2 {
+    font-size: 1.4em;
+}
+
+main a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.kinderboek_bg {
+    background-image: url(../images/kinderboek.jpg);
+    background-repeat: no-repeat;
+    transition: all 2s;
+}
+main article footer{
+    position: absolute;
+    bottom: 0.5em;
+    right: 0.5em;
+}
+main article footer i{
+    color: #003082;
+}
+/* AANMELDPAGINA */
+
+main form {
+    background: white;
+    padding: 0.5em 1em 20em 1em;
+    height: inherit;
+    width: 22em;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    display: block;
+    width: 100%;
+    height: 2.5em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    transition: all 1s;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 10px 1px rgba(31, 73, 125, 0.1);
+}
+
+.validate:valid {
+    border: 1px solid green;
+}
+.validate:invalid{
+    border: 1px solid #ffa700;
+}
+
+.form input[type="search"], input[type="submit"] {
+    border: none;
+}
+
+main form legend {
+    padding-top: 2em;
+    margin-top: 3em;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+input[type="submit"] {
+    padding: 1em 2em;
+    background: rgba(255,201,23,.9);
+    margin-left: 10em;
+    margin-top: 1em;
+    border: none;
+}
+
+/*BODY*/
+
+body {
+    font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif;
+    font-size: 0.9em;
+    line-height: 1.4;
+    background-color: #E6E6E9;
+    padding: 3em 0;
+    color: rgba(0,48,130,.8)
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    margin: 1em;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.2em;
+    padding-bottom: 0.75em;
+}
+
+/*MAIN*/
+
+main {
+    font-family: NS Sans,Segoe UI,Myriad,Verdana,sans-serif;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10%;
+    width: 98vw;
+    margin: 0 auto;
+}
+
+/* media qs
+nav li {
+    display: inline-block;
+}
+
+nav li:first-of-type {
+    margin-right: 55em;
+}
+*/
+
+@media(min-width: 26em) {
+    .form {
+        background-image: url(../images/trinna.jpg);
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+}
+
+@media(min-width: 32em) {
+    .recent article {
+        margin: 0em 3em;
+        width:30em;
+    }
+    .display1{
+        display: inline;
+    }
+    .display{
+        display: none;
+    }
+    .display2{
+        display: none;
+    }
+
+}
+
+@media(min-width: 48em) {
+    nav img {
+        display: none;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    nav li{
+        padding-top: 1em;
+    }
+}
+@media(max-width: 48em){
+    nav ul {
+        position: absolute;
+        right: -10em;
+        background-color: white;
+        height: 100vh;
+        top: 3.8em;
+        transition: all 1s;
+        opacity: 0;
+        padding: 0 30px;
+        box-shadow: -2px 0px 1px grey;
+    }
+    nav li {
+        display: block;
+        padding: 1em;
+        border-bottom: 1px solid darkgrey;
+    }
+}
+
+@media(min-width: 63em) {
+    .display2{
+        display: inline;
+    }
+    .display1{
+        display: none;
+    }
+    .display{
+        display: none;
+    }
+}
+
+@media(min-width: 78em) {
+    .artikelen {
+        max-width: 76em;
+    }
+
+}
+@keyframes shake{
+    0%{
+        transform: rotate(0);
+    }
+    33%{
+        transform: rotate(-2deg);
+    }
+    66%{
+        transform: rotate(2deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}

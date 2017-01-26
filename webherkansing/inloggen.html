@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NS</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="form">
+    <nav>
+        <a href="overzichtspagina.html"><img src="images/nslogo.svg" alt="Home"></a>
+        <img src="images/hamburger.png" alt="Hamburger">
+        <ul>
+            <li>
+                <a href="overzichtspagina.html">Home</a>
+            </li>
+            <li>
+                <form>
+                    <input type="search" placeholder="Search">
+                </form>
+            </li>
+            <li>
+                <a href="inloggen.html">Inloggen</a>
+            </li>
+            <li>
+                <a href="aanmeldpagina.html">Aanmelden</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <form action="overzichtspagina.html">
+            <fieldset>
+                <legend></legend>
+                <h1>Inloggen</h1>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required/>
+
+                <label for="password">Wachtwoord</label>
+                <input type="password" name="wachtwoord" id="password" required minlength=5/>
+
+                <label>
+                    <input value="Log in" type="submit">
+                </label>
+            </fieldset>
+        </form>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
